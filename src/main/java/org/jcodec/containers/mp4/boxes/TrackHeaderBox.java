@@ -143,7 +143,7 @@ public class TrackHeaderBox extends FullBox {
 
     private void writeMatrix(ByteBuffer out) {
         for (int i = 0; i < 9; i++)
-            out.putInt(matrix[i]);
+            out.putInt(matrix[i] * 65536);
     }
 
     private void writeVolume(ByteBuffer out) {
